@@ -1,3 +1,4 @@
+import Link from "next/link";
 function AboutUs  () {
   
   const   details = [
@@ -12,9 +13,9 @@ function AboutUs  () {
       <ul>
         {details.map((detail,index)=>(
             <li key={index}>
-                <a href="/aboutus/1">
-               <strong>Id:</strong> {detail.id}, <strong>Name:</strong> {detail.name}, <strong>Role:</strong> {detail.role}
-               </a>
+                <Link href={`/aboutus/${detail.id}`}>
+               <strong>Name:</strong> {detail.name}
+               </Link>
             </li>
 ))}
       </ul>
